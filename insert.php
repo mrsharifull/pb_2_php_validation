@@ -18,8 +18,14 @@ $err_note='';
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $class = $_POST['class'];
-    $roll = intval($_POST['roll']);
-    $registration = intval($_POST['registration']);
+    $roll = $_POST['roll'];
+    if(!empty($roll)){
+        $roll = intval($roll);
+    }
+    $registration = $_POST['registration'];
+    if(!empty($registration)){
+        $registration = intval($registration);
+    }
     $note = $_POST['note'];
 
     $err = 0;
@@ -50,6 +56,25 @@ if(isset($_POST['submit'])){
     if( strlen($note)>300){
         $err++;
         $err_note = 'Note must be less than 300 character';
+    }
+
+    if($err == 0){
+        $sql = "INSERT INTO students(name, class, roll, registration, note) VALUES ('$name','$class','$roll','$registration','$note')";
+        $result = $con->query($sql);
+
+        if($result){
+            $name='';
+            $class='';
+            $roll='';
+            $registration='';
+            $note='';
+        }
+
+
+
+
+
+
     }
     
 }

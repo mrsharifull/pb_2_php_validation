@@ -19,27 +19,27 @@
                         <form action="" method="POST">
                             <div class="form-group mb-3">
                                 <label>Name <span class="text-danger">*</span></label>
-                                <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                                <input type="text" name="name" value="<?= $name ?>" class="form-control" placeholder="Enter your name">
                                 <span class="text-danger"><?= $err_name?></span>
                             </div>
                             <div class="form-group mb-3">
                                 <label>Class <span class="text-danger">*</span></label>
-                                <input type="text" name="class" class="form-control" placeholder="Enter your class">
+                                <input type="text" name="class" value="<?= $class ?>" class="form-control" placeholder="Enter your class">
                                 <span class="text-danger"><?= $err_class?></span>
                             </div>
                             <div class="form-group mb-3">
                                 <label>Roll <span class="text-danger">*</span></label>
-                                <input type="text" name="roll" class="form-control" placeholder="Enter your roll">
+                                <input type="text" name="roll" value="<?= $roll ?>" class="form-control" placeholder="Enter your roll">
                                 <span class="text-danger"><?= $err_roll?></span>
                             </div>
                             <div class="form-group mb-3">
                                 <label>Registration <span class="text-danger">*</span></label>
-                                <input type="text" name="registration" class="form-control" placeholder="Enter your registration no">
+                                <input type="text" name="registration" value="<?= $registration ?>" class="form-control" placeholder="Enter your registration no">
                                 <span class="text-danger"><?= $err_registration?></span>
                             </div>
                             <div class="form-group mb-3">
                                 <label>Note</label>
-                               <textarea name="note" class="form-control" placeholder="write a note"></textarea>
+                               <textarea name="note" class="form-control" placeholder="write a note"><?= $note ?></textarea>
                                <span class="text-danger"><?= $err_note?></span>
                             </div>
                             <input type="submit" name="submit" value="submit" class="btn btn-sm btn-outline-info">
